@@ -12,6 +12,12 @@ import de.thro.inf.prg3.a10.model.Order;
 public interface KitchenHatch {
 
 	/**
+	 * My own function
+	 * Check if all dieshes are served
+	 * @return true if all dishes are served and false if there are more to be served
+	 */
+	boolean allDishesServed();
+	/**
 	 * Get the count how many meals can be placed in the hatch
 	 * @return max count
 	 */
@@ -42,7 +48,7 @@ public interface KitchenHatch {
 	 * Dequeue a completed dish
 	 * @return hopefully hot dish to serve to a guest
 	 */
-	default Dish dequeueDish() {
+	default Dish dequeueDish(){
 		return dequeueDish(1000);
 	}
 
